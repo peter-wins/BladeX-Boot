@@ -48,6 +48,10 @@ public class LogApiController {
 
 	private final ILogApiService logService;
 
+	public static void main(String[] args) {
+		System.out.println("我是Abert");
+	}
+
 	/**
 	 * 查询单条
 	 */
