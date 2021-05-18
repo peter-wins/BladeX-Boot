@@ -31,8 +31,8 @@ blade:
     enabled: false
     ##将docker脚本部署的redis服务映射为宿主机ip
     ##生产环境推荐使用阿里云高可用redis服务并设置密码
-    address: redis://127.0.0.1:6379
-    password: 123456
+    address: redis://172.30.0.3:6379
+    password: z454008139
   #本地文件上传
   file:
     remote-mode: true

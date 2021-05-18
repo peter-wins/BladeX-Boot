@@ -42,6 +42,7 @@ blade:
     enabled: false
     ##redis服务地址
     address: redis://120.79.52.69:3379
+    password: z454008139
   #本地文件上传
   file:
     remote-mode: true
