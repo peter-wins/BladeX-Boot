@@ -6,9 +6,9 @@ RUN mkdir -p /blade
 
 WORKDIR /blade
 
-EXPOSE 8800
+EXPOSE 8001
 
-ADD ./target/blade-api.jar ./app.jar
+ADD ./blade-api.jar ./app.jar
 
 RUN apk add --update font-adobe-100dpi ttf-dejavu fontconfig
 
