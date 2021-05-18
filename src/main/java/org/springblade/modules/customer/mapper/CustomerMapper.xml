@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.customer.mapper.CustomerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="customerResultMap" type="org.springblade.modules.customer.entity.CustomerEntity">
+        <result column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="nickname" property="nickname"/>
+        <result column="customer_phone" property="customerPhone"/>
+        <result column="customer_type" property="customerType"/>
+        <result column="email" property="email"/>
+        <result column="address" property="address"/>
+        <result column="remarks" property="remarks"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="status" property="status"/>
+        <result column="create_dept" property="createDept"/>
+    </resultMap>
+
+</mapper>

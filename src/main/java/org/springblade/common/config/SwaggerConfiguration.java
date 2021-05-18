@@ -65,7 +65,19 @@ public class SwaggerConfiguration {
 	@Bean
 	public Docket sysDocket() {
 		return docket("系统模块",
-			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.system", AppConstant.BASE_PACKAGES + ".modules.resource"));
+			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.system", AppConstant.BASE_PACKAGES + ".modules.system"));
+	}
+
+	@Bean
+	public Docket resource() {
+		return docket("资源模块",
+			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.resource", AppConstant.BASE_PACKAGES + ".modules.resource"));
+	}
+
+	@Bean
+	public Docket customer() {
+		return docket("客户模块",
+			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.customer", AppConstant.BASE_PACKAGES + ".modules.customer"));
 	}
 
 	@Bean
