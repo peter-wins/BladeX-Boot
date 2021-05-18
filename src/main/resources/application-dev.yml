@@ -2,10 +2,10 @@
 spring:
   redis:
     ##redis 单机环境配置
-    host: 127.0.0.1
-    port: 6379
-    password:
-    database: 0
+    host: 120.79.52.69
+    port: 3379
+    password: z454008139
+    database: 1
     ssl: false
     ##redis 集群环境配置
     #cluster:
@@ -13,9 +13,9 @@ spring:
     #  commandTimeout: 5000
   datasource:
     # MySql
-    url: jdbc:mysql://localhost:3306/bladex_boot?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://120.79.52.69:3306/bladex_boot?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: z454008139
     # PostgreSQL
     #url: jdbc:postgresql://127.0.0.1:5432/bladex_boot
     #username: postgres
@@ -41,7 +41,7 @@ blade:
     ##是否启用分布式锁
     enabled: false
     ##redis服务地址
-    address: redis://127.0.0.1:6379
+    address: redis://120.79.52.69:3379
   #本地文件上传
   file:
     remote-mode: true
