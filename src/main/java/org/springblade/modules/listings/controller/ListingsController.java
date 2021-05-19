@@ -5,6 +5,8 @@ import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
+
+import javax.annotation.Resource;
 import javax.validation.Valid;
 import org.springblade.core.boot.ctrl.BladeController;
 import org.springblade.common.constant.CommonConstant;
@@ -13,6 +15,10 @@ import org.springblade.core.mp.support.Condition;
 import org.springblade.core.mp.support.Query;
 import org.springblade.core.tool.api.R;
 import org.springblade.core.tool.utils.Func;
+import org.springblade.modules.customer.entity.CustomerEntity;
+import org.springblade.modules.customer.service.ICustomerService;
+import org.springblade.modules.customer.vo.CustomerVO;
+import org.springblade.modules.customer.wrapper.CustomerWrapper;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
@@ -34,6 +40,9 @@ import org.springblade.modules.listings.service.IListingsService;
 public class ListingsController extends BladeController {
 
 	private final IListingsService listingsService;
+
+	@Resource
+	private ICustomerService iCustomerService;
 
 	/**
 	 * 详情
@@ -64,6 +73,9 @@ public class ListingsController extends BladeController {
 	@ApiOperationSupport(order = 4)
 	@ApiOperation(value = "新增", notes = "传入listings")
 	public R save(@Valid @RequestBody ListingsEntity listings) {
+		//获取当前登录用户id  存入到 customerId 当中
+		CustomerEntity customerEntity = iCustomerService.findByPhone(listings.getCustomerPhone());
+		listings.setCustomerPhone(customerEntity.getCustomerPhone());
 		return R.status(listingsService.save(listings));
 	}
 

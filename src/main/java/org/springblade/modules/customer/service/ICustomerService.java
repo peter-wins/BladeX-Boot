@@ -10,4 +10,6 @@ import org.springblade.modules.customer.entity.CustomerEntity;
  */
 public interface ICustomerService extends BaseService<CustomerEntity> {
 
+	CustomerEntity findByPhone(Long customerPhone);
+
 }

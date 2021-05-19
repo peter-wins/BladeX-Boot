@@ -28,6 +28,13 @@ public class ListingsEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "客户id")
 	private Long customerId;
+
+	/**
+	 * 客户电话
+	 */
+	@ApiModelProperty(value = "客户电话")
+	private Long customerPhone;
+
 	/**
 	 * 房源名字
 	 */

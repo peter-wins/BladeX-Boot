@@ -1,6 +1,8 @@
 package org.springblade.modules.customer.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springblade.modules.customer.entity.CustomerEntity;
 
 /**
@@ -8,6 +10,9 @@ import org.springblade.modules.customer.entity.CustomerEntity;
  *
  * @author Chill
  */
+@Mapper
 public interface CustomerMapper extends BaseMapper<CustomerEntity> {
+
+	CustomerEntity findByPhone(@Param("findByPhone") Long findByPhone);
 
 }

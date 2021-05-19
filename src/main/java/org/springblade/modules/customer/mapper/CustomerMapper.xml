@@ -21,5 +21,8 @@
         <result column="status" property="status"/>
         <result column="create_dept" property="createDept"/>
     </resultMap>
+    <select id="findByPhone" resultType="org.springblade.modules.customer.entity.CustomerEntity">
+        select * from bgh_customer where customer_phone = #{customer_phone}
+    </select>
 
 </mapper>
