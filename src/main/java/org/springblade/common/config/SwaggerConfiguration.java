@@ -81,6 +81,12 @@ public class SwaggerConfiguration {
 	}
 
 	@Bean
+	public Docket listings() {
+		return docket("房源模块",
+			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.listings", AppConstant.BASE_PACKAGES + ".modules.listings"));
+	}
+
+	@Bean
 	public Docket flowDocket() {
 		return docket("工作流模块", Collections.singletonList(AppConstant.BASE_PACKAGES + ".flow"));
 	}
