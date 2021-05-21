@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.tenantpool.mapper.TenantpoolMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="tenantpoolResultMap" type="org.springblade.modules.tenantpool.entity.TenantpoolEntity">
+        <result column="id" property="id"/>
+        <result column="blade_user_id" property="bladeUserId"/>
+        <result column="tenantname" property="tenantname"/>
+        <result column="tenant_phone" property="tenantPhone"/>
+        <result column="tenant_country" property="tenantCountry"/>
+        <result column="rental_location" property="rentalLocation"/>
+        <result column="demand_type" property="demandType"/>
+        <result column="tenant_type" property="tenantType"/>
+        <result column="price_range" property="priceRange"/>
+        <result column="stay_period" property="stayPeriod"/>
+        <result column="remarks" property="remarks"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+</mapper>
