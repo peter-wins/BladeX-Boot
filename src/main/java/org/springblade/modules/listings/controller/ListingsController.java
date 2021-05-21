@@ -1,5 +1,6 @@
 package org.springblade.modules.listings.controller;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import io.swagger.annotations.Api;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +27,8 @@ import org.springblade.modules.listings.entity.ListingsEntity;
 import org.springblade.modules.listings.vo.ListingsVO;
 import org.springblade.modules.listings.wrapper.ListingsWrapper;
 import org.springblade.modules.listings.service.IListingsService;
+
+import java.sql.Wrapper;
 
 
 /**
@@ -74,8 +77,8 @@ public class ListingsController extends BladeController {
 	@ApiOperation(value = "新增", notes = "传入listings")
 	public R save(@Valid @RequestBody ListingsEntity listings) {
 		//获取当前登录用户id  存入到 customerId 当中
-		CustomerEntity customerEntity = iCustomerService.findByPhone(listings.getCustomerPhone());
-		listings.setCustomerPhone(customerEntity.getCustomerPhone());
+		listings.setCustomerPhone(iCustomerService.getOne(Wrappers.<CustomerEntity>lambdaQuery()
+			.eq(CustomerEntity::getCustomerPhone,listings.getCustomerPhone())).getCustomerPhone());
 		return R.status(listingsService.save(listings));
 	}
 
