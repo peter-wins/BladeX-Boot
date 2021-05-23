@@ -30,7 +30,7 @@ import org.springblade.modules.tenantpool.service.ITenantpoolService;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/blade-tenantpool/tenantpool")
-@Api(value = "", tags = "")
+@Api(value = "租客池表", tags = "租客池表")
 public class TenantpoolController extends BladeController {
 
 	private final ITenantpoolService tenantpoolService;
