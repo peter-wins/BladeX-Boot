@@ -1,3 +1,6 @@
+#!/bin/bash
+
+#设置jar文件名
 APP_NAME=app.jar
 
 #使用说明，用来提示输入参数
@@ -23,7 +26,7 @@ is_exist
 if [ $? -eq "0" ]; then
 echo "${APP_NAME} is already running. pid=${pid} ."
 else
-nohup java -jar $APP_NAME > /dev/null 2>&1 &
+nohup java -Xms1024m -Xmx1024m -jar $APP_NAME > /dev/null 2>&1 &
 fi
 }
 
