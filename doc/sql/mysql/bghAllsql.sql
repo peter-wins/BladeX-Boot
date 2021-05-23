@@ -211,6 +211,7 @@ CREATE TABLE `bgh_finance_management` (
                                           PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=COMPACT COMMENT='财务管理表';
 
+
 DROP TABLE IF EXISTS `bgh_after_service`;
 CREATE TABLE `bgh_after_service` (
                                      `id` bigint(64) NOT NULL COMMENT '主键id',
@@ -219,6 +220,7 @@ CREATE TABLE `bgh_after_service` (
                                      `repair_address` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '报修地址',
                                      `expect_doortodoor_time` datetime DEFAULT NULL COMMENT '期望上门时间',
                                      `service_object_type` varchar(124) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '维修物件类型',
+                                     `service_classification` int(4) DEFAULT NULL COMMENT '(售后服务分类)1：维修,2:保洁',
                                      `describer` varchar(124) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '故障描述',
                                      `declare_time` datetime DEFAULT NULL COMMENT '申报时间',
                                      `create_user` bigint(64) DEFAULT NULL COMMENT '创建人',
