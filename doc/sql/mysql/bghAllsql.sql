@@ -73,7 +73,7 @@ CREATE TABLE `bgh_tenantpool` (
                                   `tenant_country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '租户国籍',
                                   `rental_location` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '意向租房位置',
                                   `demand_type` int(2) DEFAULT NULL COMMENT '(需求户型)1：整租一室,2:整租二室',
-                                  `tenant_type` int(2) DEFAULT NULL COMMENT '(租户类型)1：租客, 2:业主',
+                                  `tenant_type` int(2) DEFAULT NULL COMMENT '(租户类型)1：私客, 2:业主',
                                   `price_range` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '可接受价格范围',
                                   `stay_period` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '入住周期',
                                   `remarks` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '备注',
@@ -82,7 +82,7 @@ CREATE TABLE `bgh_tenantpool` (
                                   `update_user` bigint(64) DEFAULT NULL COMMENT '修改人',
                                   `update_time` datetime DEFAULT NULL COMMENT '修改时间',
                                   `create_dept` bigint(64) DEFAULT NULL COMMENT '创建部门',
-                                  `status` int(2) NOT NULL DEFAULT '0' COMMENT '(租客状态状态)1：私客,2:公客',
+                                  `status` int(2) NOT NULL DEFAULT '0' COMMENT '(租客状态)1：正常,2:关闭',
                                   `is_deleted` int(2) DEFAULT '0' COMMENT '是否已删除',
                                   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=COMPACT COMMENT='租客池表';
