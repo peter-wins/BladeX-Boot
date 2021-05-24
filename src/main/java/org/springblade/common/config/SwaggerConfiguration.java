@@ -88,7 +88,7 @@ public class SwaggerConfiguration {
 
 	@Bean
 	public Docket tenantpool() {
-		return docket("房源模块",
+		return docket("租客池模块",
 			Arrays.asList(AppConstant.BASE_PACKAGES + ".modules.tenantpool", AppConstant.BASE_PACKAGES + ".modules.tenantpool"));
 	}
 
