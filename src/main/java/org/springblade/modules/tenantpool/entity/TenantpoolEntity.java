@@ -39,6 +39,16 @@ public class TenantpoolEntity extends BaseEntity {
 	@ApiModelProperty(value = "租客电话")
 	private Long tenantPhone;
 	/**
+	 * 性别
+	 */
+	@ApiModelProperty(value = "性别")
+	private String gender;
+	/**
+	 * 客户来源
+	 */
+	@ApiModelProperty(value = "客户来源")
+	private String customerSource;
+	/**
 	 * 租户国籍
 	 */
 	@ApiModelProperty(value = "租户国籍")
@@ -54,9 +64,9 @@ public class TenantpoolEntity extends BaseEntity {
 	@ApiModelProperty(value = "(需求户型)1：整租一室,2:整租二室")
 	private Integer demandType;
 	/**
-	 * (租户类型)1：租客, 2:业主
+	 * (租户类型)1：私客, 2:业主
 	 */
-	@ApiModelProperty(value = "(租户类型)1：租客, 2:业主")
+	@ApiModelProperty(value = "(租户类型)1：私客, 2:业主")
 	private Integer tenantType;
 	/**
 	 * 可接受价格范围
@@ -73,7 +83,6 @@ public class TenantpoolEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "备注")
 	private String remarks;
-
 	/**
 	 * 紧急程度
 	 */

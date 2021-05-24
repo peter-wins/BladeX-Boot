@@ -8,6 +8,8 @@
         <result column="blade_user_id" property="bladeUserId"/>
         <result column="tenantname" property="tenantname"/>
         <result column="tenant_phone" property="tenantPhone"/>
+        <result column="gender" property="gender"/>
+        <result column="customer_source" property="customerSource"/>
         <result column="tenant_country" property="tenantCountry"/>
         <result column="rental_location" property="rentalLocation"/>
         <result column="demand_type" property="demandType"/>
@@ -22,6 +24,7 @@
         <result column="create_dept" property="createDept"/>
         <result column="status" property="status"/>
         <result column="is_deleted" property="isDeleted"/>
+        <result column="urgent_degree" property="urgentDegree"/>
     </resultMap>
 
 </mapper>
