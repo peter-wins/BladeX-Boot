@@ -74,4 +74,10 @@ public class TenantpoolEntity extends BaseEntity {
 	@ApiModelProperty(value = "备注")
 	private String remarks;
 
+	/**
+	 * 紧急程度
+	 */
+	@ApiModelProperty(value = "紧急程度")
+	private String urgentDegree;
+
 }
