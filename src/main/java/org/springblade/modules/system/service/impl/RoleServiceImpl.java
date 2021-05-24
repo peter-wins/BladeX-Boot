@@ -90,7 +90,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
 		}
 		// 防止越权配置管理员角色
 		int adminCount = baseMapper.selectCount(Wrappers.<Role>query().lambda().eq(Role::getRoleAlias, RoleConstant.ADMIN).in(Role::getId, roleIds));
-		if (!AuthUtil.isAdmin() && adminCount > 0) {
+		if (!AuthUtil.isAdministrator() && adminCount > 0) {
 			throw new ServiceException("无权配置管理员角色!");
 		}
 		// 删除角色配置的菜单集合
