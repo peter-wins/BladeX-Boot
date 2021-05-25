@@ -77,8 +77,10 @@ public class ListingsController extends BladeController {
 	@ApiOperation(value = "新增", notes = "传入listings")
 	public R save(@Valid @RequestBody ListingsEntity listings) {
 		//获取当前登录用户id  存入到 customerId 当中
+//		CustomerEntity customerEntity = iCustomerService.findByPhone(listings.getCustomerPhone());
 		listings.setCustomerId(iCustomerService.getOne(Wrappers.<CustomerEntity>lambdaQuery()
-			.eq(CustomerEntity::getId,listings.getId())).getId());
+			.eq(CustomerEntity::getCustomerPhone,listings.getCustomerPhone())).getId());
+//		listings.setCustomerId(customerEntity.getId());
 		return R.status(listingsService.save(listings));
 	}
 

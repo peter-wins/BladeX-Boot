@@ -22,7 +22,7 @@
         <result column="create_dept" property="createDept"/>
     </resultMap>
     <select id="findByPhone" resultType="org.springblade.modules.customer.entity.CustomerEntity">
-        select * from bgh_customer where customer_phone = #{customer_phone}
+        select * from bgh_customer where customer_phone = #{findByPhone} and is_deleted = 0
     </select>
 
 </mapper>
