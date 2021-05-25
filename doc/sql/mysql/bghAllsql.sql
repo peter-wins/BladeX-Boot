@@ -109,13 +109,14 @@ CREATE TABLE `bgh_online_appointment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=COMPACT COMMENT='租客池线上预约表';
 
 
-
-DROP TABLE IF EXISTS `bgh_ownerpool`;
 CREATE TABLE `bgh_ownerpool` (
                                  `id` bigint(64) NOT NULL COMMENT '主键id',
                                  `blade_user_id` bigint(64) NOT NULL COMMENT '员工表id',
                                  `owner_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '业主姓名',
                                  `owner_phone` bigint(32) NOT NULL COMMENT '业主电话',
+                                 `gender` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '性别',
+                                 `customer_source` varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '客户来源',
+                                 `urgent_degree` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '紧急程度',
                                  `owner_country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '业主国籍',
                                  `owner_type` int(2) DEFAULT NULL COMMENT '(业主类型)1：公盘, 2:私盘',
                                  `price_range` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '可接受价格范围',
