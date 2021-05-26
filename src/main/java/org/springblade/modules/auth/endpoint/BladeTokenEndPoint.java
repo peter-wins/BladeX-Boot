@@ -86,11 +86,11 @@ public class BladeTokenEndPoint {
 		UserInfo userInfo = granter.grant(tokenParameter);
 
 		if (userInfo == null || userInfo.getUser() == null) {
-			return authInfo.set("error_code", HttpServletResponse.SC_BAD_REQUEST).set("error_description", "用户名或密码不正确");
+			return authInfo.set("error_code", HttpServletResponse.SC_BAD_REQUEST).set("error_description", "Username or password incorrect");
 		}
 
 		if (Func.isEmpty(userInfo.getRoles())) {
-			return authInfo.set("error_code", HttpServletResponse.SC_BAD_REQUEST).set("error_description", "未获得用户的角色信息");
+			return authInfo.set("error_code", HttpServletResponse.SC_BAD_REQUEST).set("error_description", "The user's role information was not obtained");
 		}
 
 		return TokenUtil.createAuthInfo(userInfo);

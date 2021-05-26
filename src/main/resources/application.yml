@@ -163,7 +163,7 @@ blade:
     state: false
   #redis序列化方式
   redis:
-    serializer-type: protostuff
+    serializer-type: json
   #接口配置
   api:
     #报文加密配置
