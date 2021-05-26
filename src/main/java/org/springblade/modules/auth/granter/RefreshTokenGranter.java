@@ -21,7 +21,9 @@ import lombok.AllArgsConstructor;
 import org.springblade.core.launch.constant.TokenConstant;
 import org.springblade.core.log.exception.ServiceException;
 import org.springblade.core.secure.utils.AuthUtil;
+import org.springblade.core.tool.utils.DigestUtil;
 import org.springblade.core.tool.utils.Func;
+import org.springblade.modules.auth.enums.UserEnum;
 import org.springblade.modules.auth.provider.ITokenGranter;
 import org.springblade.modules.auth.provider.TokenParameter;
 import org.springblade.modules.auth.utils.TokenUtil;
@@ -62,7 +64,17 @@ public class RefreshTokenGranter implements ITokenGranter {
 						throw new ServiceException(TokenUtil.USER_HAS_NO_TENANT_PERMISSION);
 					}
 					// 获取用户信息
-					userInfo = userService.userInfo(Func.toLong(claims.get(TokenConstant.USER_ID)));
+					//userInfo = userService.userInfo(Func.toLong(claims.get(TokenConstant.USER_ID)));
+					// 获取用户类型
+					String userType = tokenParameter.getArgs().getStr("userType");
+					// 根据不同用户类型调用对应的接口返回数据，用户可自行拓展
+					if (userType.equals(UserEnum.WEB.getName())) {
+						userInfo = userService.userInfo(Func.toLong(claims.get(TokenConstant.USER_ID)), UserEnum.WEB);
+					} else if (userType.equals(UserEnum.APP.getName())) {
+						userInfo = userService.userInfo(Func.toLong(claims.get(TokenConstant.USER_ID)), UserEnum.APP);
+					} else {
+						userInfo = userService.userInfo(Func.toLong(claims.get(TokenConstant.USER_ID)), UserEnum.OTHER);
+					}
 				}
 			}
 		}
