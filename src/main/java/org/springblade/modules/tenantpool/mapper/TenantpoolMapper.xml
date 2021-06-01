@@ -14,8 +14,11 @@
         <result column="rental_location" property="rentalLocation"/>
         <result column="demand_type" property="demandType"/>
         <result column="tenant_type" property="tenantType"/>
+        <result column="other_table" property="otherTable"/>
         <result column="price_range" property="priceRange"/>
+        <result column="other_contact" property="otherContact"/>
         <result column="stay_period" property="stayPeriod"/>
+        <result column="urgent_degree" property="urgentDegree"/>
         <result column="remarks" property="remarks"/>
         <result column="create_user" property="createUser"/>
         <result column="create_time" property="createTime"/>
@@ -24,7 +27,6 @@
         <result column="create_dept" property="createDept"/>
         <result column="status" property="status"/>
         <result column="is_deleted" property="isDeleted"/>
-        <result column="urgent_degree" property="urgentDegree"/>
     </resultMap>
 
 </mapper>

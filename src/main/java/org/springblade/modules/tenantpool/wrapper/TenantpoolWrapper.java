@@ -6,7 +6,7 @@ import org.springblade.modules.tenantpool.entity.TenantpoolEntity;
 import org.springblade.modules.tenantpool.vo.TenantpoolVO;
 
 /**
- *  包装类,返回视图层所需的字段
+ * 租客池表 包装类,返回视图层所需的字段
  *
  * @author Chill
  */

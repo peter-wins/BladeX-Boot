@@ -23,7 +23,7 @@ import org.springblade.modules.tenantpool.service.ITenantpoolService;
 
 
 /**
- *  控制器
+ * 租客池表 控制器
  *
  * @author Chill
  */
@@ -64,7 +64,7 @@ public class TenantpoolController extends BladeController {
 	@ApiOperationSupport(order = 4)
 	@ApiOperation(value = "新增", notes = "传入tenantpool")
 	public R save(@Valid @RequestBody TenantpoolEntity tenantpool) {
-		return R.status(tenantpoolService.save(tenantpool));
+		return R.status(tenantpoolService.submit(tenantpool));
 	}
 
 	/**
