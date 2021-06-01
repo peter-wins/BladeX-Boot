@@ -2,8 +2,8 @@ package org.springblade.modules.tenantpool.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.springblade.core.mp.base.BaseServiceImpl;
-import org.springblade.modules.ownerpool.entity.TenantFollowupEntity;
-import org.springblade.modules.ownerpool.service.ITenantFollowupService;
+import org.springblade.modules.tenantpool.entity.TenantFollowupEntity;
+import org.springblade.modules.tenantpool.service.ITenantFollowupService;
 import org.springblade.modules.tenantpool.entity.TenantpoolEntity;
 import org.springblade.modules.tenantpool.mapper.TenantpoolMapper;
 import org.springblade.modules.tenantpool.service.ITenantpoolService;
@@ -24,10 +24,11 @@ public class TenantpoolServiceImpl extends BaseServiceImpl<TenantpoolMapper, Ten
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public boolean submit(TenantpoolEntity tenantpoolEntity) {
+		super.save(tenantpoolEntity);
 		TenantFollowupEntity tenantFollowupEntity = new TenantFollowupEntity();
+		tenantFollowupEntity.setTenantpoolId(tenantpoolEntity.getId());
 		tenantFollowupEntity.setContent("Input clues");
 		tenantFollowupEntity.setType(1); // 1字典 录入私客
-		tenantFollowupService.save(tenantFollowupEntity);
-		return super.save(tenantpoolEntity);
+		return tenantFollowupService.save(tenantFollowupEntity);
 	}
 }

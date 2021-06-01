@@ -1,4 +1,4 @@
-package org.springblade.modules.ownerpool.controller;
+package org.springblade.modules.tenantpool.controller;
 
 import io.swagger.annotations.Api;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
@@ -16,10 +16,10 @@ import org.springblade.core.tool.utils.Func;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
-import org.springblade.modules.ownerpool.entity.TenantFollowupEntity;
-import org.springblade.modules.ownerpool.vo.TenantFollowupVO;
-import org.springblade.modules.ownerpool.wrapper.TenantFollowupWrapper;
-import org.springblade.modules.ownerpool.service.ITenantFollowupService;
+import org.springblade.modules.tenantpool.entity.TenantFollowupEntity;
+import org.springblade.modules.tenantpool.vo.TenantFollowupVO;
+import org.springblade.modules.tenantpool.wrapper.TenantFollowupWrapper;
+import org.springblade.modules.tenantpool.service.ITenantFollowupService;
 
 
 /**

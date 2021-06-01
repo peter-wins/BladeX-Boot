@@ -1,4 +1,4 @@
-package org.springblade.modules.ownerpool.entity;
+package org.springblade.modules.tenantpool.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import org.springblade.core.mp.base.BaseEntity;

@@ -52,9 +52,9 @@ public class TenantpoolController extends BladeController {
 	@GetMapping("/list")
 	@ApiOperationSupport(order = 2)
 	@ApiOperation(value = "分页", notes = "传入tenantpool")
-	public R<IPage<TenantpoolEntity>> list(TenantpoolEntity tenantpool, Query query) {
+	public R<IPage<TenantpoolVO>> list(TenantpoolEntity tenantpool, Query query) {
 		IPage<TenantpoolEntity> pages = tenantpoolService.page(Condition.getPage(query), Condition.getQueryWrapper(tenantpool));
-		return R.data(pages);
+		return R.data(TenantpoolWrapper.build().pageVO(pages));
 	}
 
 	/**

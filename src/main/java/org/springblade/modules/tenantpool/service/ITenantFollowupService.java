@@ -1,7 +1,7 @@
-package org.springblade.modules.ownerpool.service;
+package org.springblade.modules.tenantpool.service;
 
 import org.springblade.core.mp.base.BaseService;
-import org.springblade.modules.ownerpool.entity.TenantFollowupEntity;
+import org.springblade.modules.tenantpool.entity.TenantFollowupEntity;
 
 /**
  * 租客池跟进记录表 服务类

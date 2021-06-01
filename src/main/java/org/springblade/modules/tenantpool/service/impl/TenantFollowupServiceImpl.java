@@ -1,9 +1,9 @@
-package org.springblade.modules.ownerpool.service.impl;
+package org.springblade.modules.tenantpool.service.impl;
 
 import org.springblade.core.mp.base.BaseServiceImpl;
-import org.springblade.modules.ownerpool.entity.TenantFollowupEntity;
-import org.springblade.modules.ownerpool.mapper.TenantFollowupMapper;
-import org.springblade.modules.ownerpool.service.ITenantFollowupService;
+import org.springblade.modules.tenantpool.entity.TenantFollowupEntity;
+import org.springblade.modules.tenantpool.mapper.TenantFollowupMapper;
+import org.springblade.modules.tenantpool.service.ITenantFollowupService;
 import org.springframework.stereotype.Service;
 
 /**

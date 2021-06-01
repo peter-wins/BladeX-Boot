@@ -72,7 +72,7 @@ public class TenantpoolEntity extends BaseEntity {
 	 * 字典 其他需求标签
 	 */
 	@ApiModelProperty(value = "字典 其他需求标签")
-	private Integer otheTable;
+	private String otherDemand;
 	/**
 	 * 字典 可接受价格范围 1:<=1000 2:1001-1500 .....
 	 */

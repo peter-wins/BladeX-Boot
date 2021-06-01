@@ -29,10 +29,22 @@ import lombok.Getter;
 public enum DictBizEnum {
 
 	/**
-	 * 测试
+	 * 租户线索池
 	 */
-	TEST("test"),
-	;
+	GENDER("gender"),
+	DEMAND_TYPE("demand_type"),
+	TENANT_TYPE("tenant_type"),
+	TENANTPOOL_CUSTOMER_SOURCE("tenantpool_customer_source"),
+	TENANTPOOL_PRICE_RANGE("tenantpool_price_range"),
+	TENANTPOOL_OTHER_DEMAND("tenantpool_other_demand"),
+	TENANTPOOL_STATUS("tenantpool_status"),
+	TENANTPOOL_URGENT_DEGREE("tenantpool_urgent_degree"),
+	TENANTPOOL_STAY_PERIOD("tenantpool_stay_period"),
+
+	/**
+	 * 租客跟进记录
+	 */
+	TENANT_FOLLOWUP_TYPE_VALUE("tenant_followup_type_value");
 
 	final String name;
 

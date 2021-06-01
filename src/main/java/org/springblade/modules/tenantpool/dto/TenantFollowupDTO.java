@@ -1,8 +1,8 @@
-package org.springblade.modules.ownerpool.dto;
+package org.springblade.modules.tenantpool.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springblade.modules.ownerpool.entity.TenantFollowupEntity;
+import org.springblade.modules.tenantpool.entity.TenantFollowupEntity;
 
 /**
  * 租客池跟进记录表 模型DTO
