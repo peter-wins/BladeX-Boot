@@ -37,12 +37,12 @@ public class TenantpoolWrapper extends BaseEntityWrapper<TenantpoolEntity, Tenan
 	public TenantpoolVO entityVO(TenantpoolEntity tenantpool) {
 		TenantpoolVO tenantpoolVO = BeanUtil.copy(tenantpool, TenantpoolVO.class);
 		tenantpoolVO.setGenderValue(DictBizCache.getValue(DictBizEnum.GENDER, tenantpool.getGender()));
-		tenantpoolVO.setDemandTypeValue(DictBizCache.getValue(DictBizEnum.DEMAND_TYPE, tenantpool.getGender()));
-		tenantpoolVO.setCustomerSourceValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getCustomerSource()));
-		tenantpoolVO.setTenantTypeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getGender()));
-		tenantpoolVO.setPriceRangeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_PRICE_RANGE, tenantpool.getGender()));
-		tenantpoolVO.setStayPeriodValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_STAY_PERIOD, tenantpool.getGender()));
-		tenantpoolVO.setUrgentDegreeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_URGENT_DEGREE, tenantpool.getGender()));
+		tenantpoolVO.setDemandTypeValue(DictBizCache.getValue(DictBizEnum.DEMAND_TYPE, tenantpool.getDemandType()));
+		tenantpoolVO.setCustomerSourceValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getTenantType()));
+		tenantpoolVO.setTenantTypeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getCustomerSource()));
+		tenantpoolVO.setPriceRangeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_PRICE_RANGE, tenantpool.getPriceRange()));
+		tenantpoolVO.setStayPeriodValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_STAY_PERIOD, tenantpool.getStayPeriod()));
+		tenantpoolVO.setUrgentDegreeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_URGENT_DEGREE, tenantpool.getUrgentDegree()));
 
 		List<TenantFollowupEntity> tenantFollowupEntityList = tenantFollowupService.list(Wrappers.<TenantFollowupEntity>lambdaQuery().eq(TenantFollowupEntity::getTenantpoolId, tenantpool.getId()).orderByDesc(TenantFollowupEntity::getCreateTime));
 		tenantpoolVO.setTenantFollowupVOList(TenantFollowupWrapper.build().listVO(tenantFollowupEntityList));
