@@ -14,13 +14,13 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.common.cache;
+package org.springblade.modules.ownerpool.cache;
 
-import org.springblade.common.enums.DictOwnerEnum;
 import org.springblade.core.cache.utils.CacheUtil;
 import org.springblade.core.secure.utils.AuthUtil;
 import org.springblade.core.tool.utils.SpringUtil;
 import org.springblade.core.tool.utils.StringPool;
+import org.springblade.modules.ownerpool.enums.DictOwnerEnum;
 import org.springblade.modules.system.entity.DictBiz;
 import org.springblade.modules.system.service.IDictBizService;
 

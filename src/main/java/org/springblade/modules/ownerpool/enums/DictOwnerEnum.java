@@ -14,7 +14,7 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.common.enums;
+package org.springblade.modules.ownerpool.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,17 +33,8 @@ public enum DictOwnerEnum {
 	 */
 	GENDER("gender"),
 	OWNER_TYPE("owner_type"),
-	TENANTPOOL_CUSTOMER_SOURCE("tenantpool_customer_source"),
-	TENANTPOOL_PRICE_RANGE("tenantpool_price_range"),
-	TENANTPOOL_OTHER_DEMAND("tenantpool_other_demand"),
-	TENANTPOOL_STATUS("tenantpool_status"),
-	TENANTPOOL_URGENT_DEGREE("tenantpool_urgent_degree"),
-	TENANTPOOL_STAY_PERIOD("tenantpool_stay_period"),
-
-	/**
-	 * 租客跟进记录
-	 */
-	TENANT_FOLLOWUP_TYPE_VALUE("tenant_followup_type_value");
+	COMMISSION_TYPE("commission_type"),
+	CUSTOMER_SOURCE("customer_source");
 
 	final String name;
 

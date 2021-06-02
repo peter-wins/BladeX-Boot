@@ -13,6 +13,11 @@ import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 @EqualsAndHashCode(callSuper = true)
 public class OwnerpoolVO extends OwnerpoolEntity {
 
+	String genderValue;
+	String customerSourceValue;
+	String ownerTypeValue;
+	String commissionTypeValue;
+
 	private static final long serialVersionUID = 1L;
 
 }
