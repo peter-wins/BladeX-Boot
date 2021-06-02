@@ -25,7 +25,7 @@ public class OwnerpoolWrapper extends BaseEntityWrapper<OwnerpoolEntity, Ownerpo
 		ownerpoolVO.setGenderValue(DictOwnerCache.getValue(DictOwnerEnum.GENDER,ownerpool.getGender()));
 		ownerpoolVO.setCustomerSourceValue(DictOwnerCache.getValue(DictOwnerEnum.CUSTOMER_SOURCE,ownerpool.getCustomerSource()));
 		ownerpoolVO.setOwnerTypeValue(DictOwnerCache.getValue(DictOwnerEnum.OWNER_TYPE,ownerpool.getOwnerType()));
-		ownerpoolVO.setCommissionTypeValue(DictOwnerCache.getValue(DictOwnerEnum.COMMISSION_TYPE,ownerpool.getCommissionType()));
+		//ownerpoolVO.setCommissionTypeValue(DictOwnerCache.getValue(DictOwnerEnum.COMMISSION_TYPE,ownerpool.getCommissionType()));
 		//User createUser = UserCache.getUser(ownerpool.getCreateUser());
 		//User updateUser = UserCache.getUser(ownerpool.getUpdateUser());
 		//ownerpoolVO.setCreateUserName(createUser.getName());

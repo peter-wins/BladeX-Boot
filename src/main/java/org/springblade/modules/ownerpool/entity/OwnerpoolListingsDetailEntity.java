@@ -13,14 +13,14 @@ import java.time.LocalDateTime;
 
 
 /**
- *  实体类
+ * 业主池房源详情表 实体类
  *
  * @author Chill
  */
 @Data
 @TableName("bgh_ownerpool_listings_detail")
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "OwnerpoolListingsDetail对象", description = "")
+@ApiModel(value = "OwnerpoolListingsDetail对象", description = "业主池房源详情表")
 public class OwnerpoolListingsDetailEntity extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -30,6 +30,11 @@ public class OwnerpoolListingsDetailEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "业主池id")
 	private Long ownerpoolId;
+	/**
+	 * 城市
+	 */
+	@ApiModelProperty(value = "城市")
+	private String city;
 	/**
 	 * 房源地址
 	 */
@@ -85,6 +90,11 @@ public class OwnerpoolListingsDetailEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "房子本身年限")
 	private String hourseYears;
+	/**
+	 * (委托类型)1:正常公寓,2:复式公寓, 3:连排别墅、4:独栋别墅)
+	 */
+	@ApiModelProperty(value = "(委托类型)1:正常公寓,2:复式公寓, 3:连排别墅、4:独栋别墅)")
+	private Integer commissionType;
 	/**
 	 * 备注
 	 */

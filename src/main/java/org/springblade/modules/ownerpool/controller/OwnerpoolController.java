@@ -13,6 +13,9 @@ import org.springblade.core.mp.support.Condition;
 import org.springblade.core.mp.support.Query;
 import org.springblade.core.tool.api.R;
 import org.springblade.core.tool.utils.Func;
+import org.springblade.modules.ownerpool.dto.OwnerpoolDTO;
+import org.springblade.modules.ownerpool.entity.OwnerpoolListingsDetailEntity;
+import org.springblade.modules.ownerpool.form.OwnerpoolForm;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
@@ -20,6 +23,8 @@ import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 import org.springblade.modules.ownerpool.vo.OwnerpoolVO;
 import org.springblade.modules.ownerpool.wrapper.OwnerpoolWrapper;
 import org.springblade.modules.ownerpool.service.IOwnerpoolService;
+
+import java.util.List;
 
 
 /**
@@ -65,6 +70,16 @@ public class OwnerpoolController extends BladeController {
 	@ApiOperation(value = "新增", notes = "传入ownerpool")
 	public R save(@Valid @RequestBody OwnerpoolEntity ownerpool) {
 		return R.status(ownerpoolService.save(ownerpool));
+	}
+
+	/**
+	 * 新增 代码自定义代号
+	 */
+	@PostMapping("/appToSave")
+	@ApiOperationSupport(order = 4)
+	@ApiOperation(value = "新增 H5", notes = "传入ownerpool")
+	public R appToSave(@Valid @RequestBody OwnerpoolDTO ownerpoolDTO) {
+		return R.status(ownerpoolService.appToSave(ownerpoolDTO));
 	}
 
 	/**

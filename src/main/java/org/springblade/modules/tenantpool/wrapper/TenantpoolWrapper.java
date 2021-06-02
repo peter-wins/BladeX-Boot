@@ -38,21 +38,14 @@ public class TenantpoolWrapper extends BaseEntityWrapper<TenantpoolEntity, Tenan
 		TenantpoolVO tenantpoolVO = BeanUtil.copy(tenantpool, TenantpoolVO.class);
 		tenantpoolVO.setGenderValue(DictBizCache.getValue(DictBizEnum.GENDER, tenantpool.getGender()));
 		tenantpoolVO.setDemandTypeValue(DictBizCache.getValue(DictBizEnum.DEMAND_TYPE, tenantpool.getDemandType()));
-		tenantpoolVO.setCustomerSourceValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getTenantType()));
-		tenantpoolVO.setTenantTypeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_CUSTOMER_SOURCE, tenantpool.getCustomerSource()));
+		tenantpoolVO.setCustomerSourceValue(DictBizCache.getValue(DictBizEnum.CUSTOMER_SOURCE, tenantpool.getCustomerSource()));
+		tenantpoolVO.setTenantTypeValue(DictBizCache.getValue(DictBizEnum.TENANT_TYPE, tenantpool.getTenantType()));
 		tenantpoolVO.setPriceRangeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_PRICE_RANGE, tenantpool.getPriceRange()));
 		tenantpoolVO.setStayPeriodValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_STAY_PERIOD, tenantpool.getStayPeriod()));
 		tenantpoolVO.setUrgentDegreeValue(DictBizCache.getValue(DictBizEnum.TENANTPOOL_URGENT_DEGREE, tenantpool.getUrgentDegree()));
 
 		List<TenantFollowupEntity> tenantFollowupEntityList = tenantFollowupService.list(Wrappers.<TenantFollowupEntity>lambdaQuery().eq(TenantFollowupEntity::getTenantpoolId, tenantpool.getId()).orderByDesc(TenantFollowupEntity::getCreateTime));
 		tenantpoolVO.setTenantFollowupVOList(TenantFollowupWrapper.build().listVO(tenantFollowupEntityList));
-
-
-		//tenantpoolVO.set(DictCache.getValue(DictBizEnum.TENANTPOOL_URGENT_DEGREE.getName(), tenantpool.getGender()));
-		//User createUser = UserCache.getUser(tenantpool.getCreateUser());
-		//User updateUser = UserCache.getUser(tenantpool.getUpdateUser());
-		//tenantpoolVO.setCreateUserName(createUser.getName());
-		//tenantpoolVO.setUpdateUserName(updateUser.getName());
 
 		return tenantpoolVO;
 	}

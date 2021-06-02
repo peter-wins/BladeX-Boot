@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
 
 
 /**
- *  实体类
+ * 业主池表 实体类
  *
  * @author Chill
  */
 @Data
 @TableName("bgh_ownerpool")
 @EqualsAndHashCode(callSuper = true)
-@ApiModel(value = "Ownerpool对象", description = "")
+@ApiModel(value = "Ownerpool对象", description = "业主池表")
 public class OwnerpoolEntity extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -38,6 +38,11 @@ public class OwnerpoolEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "业主电话")
 	private Long ownerPhone;
+	/**
+	 * 其他联系方式
+	 */
+	@ApiModelProperty(value = "其他联系方式")
+	private String otherContact;
 	/**
 	 * 性别
 	 */
@@ -63,11 +68,6 @@ public class OwnerpoolEntity extends BaseEntity {
 	 */
 	@ApiModelProperty(value = "(业主类型)1：公盘, 2:私盘")
 	private Integer ownerType;
-	/**
-	 * (委托类型)1：公寓(正常公寓,复式公寓), 2:独栋(连排别墅、独栋别墅)
-	 */
-	@ApiModelProperty(value = "(委托类型)1：公寓(正常公寓,复式公寓), 2:独栋(连排别墅、独栋别墅)")
-	private Integer commissionType;
 	/**
 	 * 备注
 	 */

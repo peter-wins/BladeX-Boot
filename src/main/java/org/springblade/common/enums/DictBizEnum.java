@@ -34,7 +34,7 @@ public enum DictBizEnum {
 	GENDER("gender"),
 	DEMAND_TYPE("demand_type"),
 	TENANT_TYPE("tenant_type"),
-	TENANTPOOL_CUSTOMER_SOURCE("tenantpool_customer_source"),
+	CUSTOMER_SOURCE("customer_source"),
 	TENANTPOOL_PRICE_RANGE("tenantpool_price_range"),
 	TENANTPOOL_OTHER_DEMAND("tenantpool_other_demand"),
 	TENANTPOOL_STATUS("tenantpool_status"),
