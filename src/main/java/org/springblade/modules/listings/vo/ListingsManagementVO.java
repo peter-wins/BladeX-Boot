@@ -2,16 +2,16 @@ package org.springblade.modules.listings.vo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springblade.modules.listings.entity.ListingsEntity;
+import org.springblade.modules.listings.entity.ListingsManagementEntity;
 
 /**
- * 房源信息表 模型VO
+ *  模型VO
  *
  * @author Chill
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class ListingsVO extends ListingsEntity {
+public class ListingsManagementVO extends ListingsManagementEntity {
 
 	private static final long serialVersionUID = 1L;
 

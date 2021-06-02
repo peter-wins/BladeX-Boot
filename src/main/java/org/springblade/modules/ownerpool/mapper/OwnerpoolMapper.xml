@@ -11,8 +11,27 @@
         <result column="gender" property="gender"/>
         <result column="customer_source" property="customerSource"/>
         <result column="urgent_degree" property="urgentDegree"/>
+        <result column="listings_address" property="listingsAddress"/>
+        <result column="listings_number" property="listingsNumber"/>
+        <result column="decoration_situation" property="decorationSituation"/>
+        <result column="room" property="room"/>
+        <result column="hall" property="hall"/>
+        <result column="kitchen" property="kitchen"/>
+        <result column="guard" property="guard"/>
+        <result column="image_url" property="imageUrl"/>
+        <result column="rent_area" property="rentArea"/>
+        <result column="rent_price" property="rentPrice"/>
+        <result column="hourse_years" property="hourseYears"/>
+        <result column="rent_free_status" property="rentFreeStatus"/>
+        <result column="project_address" property="projectAddress"/>
+        <result column="listings_count" property="listingsCount"/>
+        <result column="room_count" property="roomCount"/>
+        <result column="expect_price" property="expectPrice"/>
+        <result column="expect_years" property="expectYears"/>
+        <result column="project_iamge_url" property="projectIamgeUrl"/>
         <result column="owner_country" property="ownerCountry"/>
         <result column="owner_type" property="ownerType"/>
+        <result column="commission_type" property="commissionType"/>
         <result column="price_range" property="priceRange"/>
         <result column="stay_period" property="stayPeriod"/>
         <result column="remarks" property="remarks"/>

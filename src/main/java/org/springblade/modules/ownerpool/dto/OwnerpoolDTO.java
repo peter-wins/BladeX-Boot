@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 
 /**
- *  模型DTO
+ * 业主池表 模型DTO
  *
  * @author Chill
  */

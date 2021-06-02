@@ -23,7 +23,7 @@ import org.springblade.modules.ownerpool.service.IOwnerpoolService;
 
 
 /**
- *  控制器
+ * 业主池表 控制器
  *
  * @author Chill
  */

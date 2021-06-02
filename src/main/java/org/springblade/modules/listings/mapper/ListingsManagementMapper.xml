@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.listings.mapper.ListingsManagementMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="listings_managementResultMap" type="org.springblade.modules.listings.entity.ListingsManagementEntity">
+        <result column="id" property="id"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="dept_id" property="deptId"/>
+        <result column="listings_type" property="listingsType"/>
+        <result column="listings_number" property="listingsNumber"/>
+        <result column="house_inspector_name" property="houseInspectorName"/>
+        <result column="area" property="area"/>
+        <result column="google_location" property="googleLocation"/>
+        <result column="rent_price" property="rentPrice"/>
+        <result column="hourse_years" property="hourseYears"/>
+        <result column="room" property="room"/>
+        <result column="hall" property="hall"/>
+        <result column="kitchen" property="kitchen"/>
+        <result column="guard" property="guard"/>
+        <result column="swimming_pool_status" property="swimmingPoolStatus"/>
+        <result column="scheduled_info" property="scheduledInfo"/>
+        <result column="unit_type" property="unitType"/>
+        <result column="rent_area" property="rentArea"/>
+        <result column="remarks" property="remarks"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+</mapper>

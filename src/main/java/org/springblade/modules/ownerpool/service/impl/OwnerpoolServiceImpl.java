@@ -7,7 +7,7 @@ import org.springblade.modules.ownerpool.service.IOwnerpoolService;
 import org.springframework.stereotype.Service;
 
 /**
- *  服务实现类
+ * 业主池表 服务实现类
  *
  * @author Chill
  */
