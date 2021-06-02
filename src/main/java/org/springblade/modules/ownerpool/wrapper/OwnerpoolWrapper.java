@@ -6,7 +6,7 @@ import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 import org.springblade.modules.ownerpool.vo.OwnerpoolVO;
 
 /**
- * 业主池表 包装类,返回视图层所需的字段
+ *  包装类,返回视图层所需的字段
  *
  * @author Chill
  */

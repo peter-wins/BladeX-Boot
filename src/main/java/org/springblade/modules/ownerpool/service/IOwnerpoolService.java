@@ -4,7 +4,7 @@ import org.springblade.core.mp.base.BaseService;
 import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 
 /**
- * 业主池表 服务类
+ *  服务类
  *
  * @author Chill
  */

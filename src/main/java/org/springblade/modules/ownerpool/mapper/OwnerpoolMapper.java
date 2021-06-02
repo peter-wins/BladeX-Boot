@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springblade.modules.ownerpool.entity.OwnerpoolEntity;
 
 /**
- * 业主池表 Mapper 接口
+ *  Mapper 接口
  *
  * @author Chill
  */
