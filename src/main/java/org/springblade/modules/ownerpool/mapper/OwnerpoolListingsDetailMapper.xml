@@ -17,13 +17,6 @@
         <result column="rent_area" property="rentArea"/>
         <result column="rent_price" property="rentPrice"/>
         <result column="hourse_years" property="hourseYears"/>
-        <result column="rent_free_status" property="rentFreeStatus"/>
-        <result column="project_address" property="projectAddress"/>
-        <result column="listings_count" property="listingsCount"/>
-        <result column="room_count" property="roomCount"/>
-        <result column="expect_price" property="expectPrice"/>
-        <result column="expect_years" property="expectYears"/>
-        <result column="project_iamge_url" property="projectIamgeUrl"/>
         <result column="remarks" property="remarks"/>
         <result column="create_user" property="createUser"/>
         <result column="create_time" property="createTime"/>

@@ -14,8 +14,6 @@
         <result column="owner_country" property="ownerCountry"/>
         <result column="owner_type" property="ownerType"/>
         <result column="commission_type" property="commissionType"/>
-        <result column="price_range" property="priceRange"/>
-        <result column="stay_period" property="stayPeriod"/>
         <result column="remarks" property="remarks"/>
         <result column="create_user" property="createUser"/>
         <result column="create_time" property="createTime"/>

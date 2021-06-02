@@ -69,16 +69,6 @@ public class OwnerpoolEntity extends BaseEntity {
 	@ApiModelProperty(value = "(委托类型)1：公寓(正常公寓,复式公寓), 2:独栋(连排别墅、独栋别墅)")
 	private Integer commissionType;
 	/**
-	 * 可接受价格范围
-	 */
-	@ApiModelProperty(value = "可接受价格范围")
-	private String priceRange;
-	/**
-	 * 入住周期
-	 */
-	@ApiModelProperty(value = "入住周期")
-	private String stayPeriod;
-	/**
 	 * 备注
 	 */
 	@ApiModelProperty(value = "备注")

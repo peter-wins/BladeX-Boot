@@ -81,45 +81,10 @@ public class OwnerpoolListingsDetailEntity extends BaseEntity {
 	@ApiModelProperty(value = "收房报价")
 	private BigDecimal rentPrice;
 	/**
-	 * 房子年限
+	 * 房子本身年限
 	 */
-	@ApiModelProperty(value = "房子年限")
+	@ApiModelProperty(value = "房子本身年限")
 	private String hourseYears;
-	/**
-	 * (免租状态)1：接受, 2:不接受
-	 */
-	@ApiModelProperty(value = "(免租状态)1：接受, 2:不接受")
-	private Integer rentFreeStatus;
-	/**
-	 * 项目地址
-	 */
-	@ApiModelProperty(value = "项目地址")
-	private String projectAddress;
-	/**
-	 * 房型数量
-	 */
-	@ApiModelProperty(value = "房型数量")
-	private String listingsCount;
-	/**
-	 * 房间数量
-	 */
-	@ApiModelProperty(value = "房间数量")
-	private String roomCount;
-	/**
-	 * 期望价格
-	 */
-	@ApiModelProperty(value = "期望价格")
-	private BigDecimal expectPrice;
-	/**
-	 * 期望委托年限
-	 */
-	@ApiModelProperty(value = "期望委托年限")
-	private String expectYears;
-	/**
-	 * 项目图片
-	 */
-	@ApiModelProperty(value = "项目图片")
-	private String projectIamgeUrl;
 	/**
 	 * 备注
 	 */
