@@ -30,7 +30,7 @@ import org.springblade.modules.ownerpool.service.IOwnerpoolListingsDetailService
 @RestController
 @AllArgsConstructor
 @RequestMapping("/blade-ownerpool/ownerpool_listings_detail")
-@Api(value = "", tags = "")
+@Api(value = "业主池房源详情表", tags = "业主池房源详情表")
 public class OwnerpoolListingsDetailController extends BladeController {
 
 	private final IOwnerpoolListingsDetailService ownerpool_listings_detailService;
