@@ -29,11 +29,11 @@ import lombok.Getter;
 public enum DictOwnerEnum {
 
 	/**
-	 * 租户线索池
+	 * 业主池索池
 	 */
 	GENDER("gender"),
-	OWNER_TYPE("owner_type"),
-	COMMISSION_TYPE("commission_type"),
+	OWNER_TYPE("ownerpool_owner_type"),
+	COMMISSION_TYPE("ownerpool_commission_type"),
 	CUSTOMER_SOURCE("customer_source");
 
 	final String name;
